@@ -6,7 +6,7 @@ authors = ["Javin Lacson <javin@teamengine.org>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.12"
 flask-restful = "^0.3.9"
 flask-cors = "^3.0.10"
 aniso8601 = "^9.0.1"

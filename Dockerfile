@@ -19,4 +19,4 @@ RUN poetry install
 
 EXPOSE 5001
 
-CMD ["poetry", "run", "flask", "--app", "server.app", "--debug", "run", "--host", "0.0.0.0", "--port", "5001"]
+CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:5001", "server.app:app"]
