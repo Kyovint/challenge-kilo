@@ -23,10 +23,13 @@ services:
     networks:
       - enchantments_network
     build:
-      context: ./server
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
+    ports:
+      - "5001:5001"
 
 volumes:
   static_volume: {}
